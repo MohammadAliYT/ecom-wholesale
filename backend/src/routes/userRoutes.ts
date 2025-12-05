@@ -6,10 +6,10 @@ import {
   getUserById,
   deleteUser,
   updateUser,
-} from "../controllers/userController.ts";
+} from "../controllers/userController";
 import rateLimit from "express-rate-limit";
-import { authenticate } from "../middleware/adminAuth.ts";
-import { authorize } from "../middleware/otherAuth.ts";
+import { authenticate } from "../middleware/adminAuth";
+import { authorize } from "../middleware/otherAuth";
 
 const router = Router();
 const signupLimiter = rateLimit({

@@ -1,4 +1,4 @@
-import { pool } from "../src/config/db";
+// import { pool } from "../src/config/db";
 import { execSync } from "child_process";
 import { readFileSync, readdirSync } from "fs";
 import dotenv from "dotenv";
