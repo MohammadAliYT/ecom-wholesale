@@ -23,17 +23,17 @@ export function createApp(): Application {
   // Health check
   app.get("/healthz", (_req, res) => res.send("ok"));
 
-  // 404 fallback — after routes
-  app.use((req, res) => {
-    res.status(404).json({ statusCode: 404, message: "Route not found" });
-  });
-
   // App Landing Point
   app.get("/", (_req, res) => {
     res.json({
       status: "ok",
       message: "Backend is running 🚀",
     });
+  });
+
+  // 404 fallback — after routes
+  app.use((req, res) => {
+    res.status(404).json({ statusCode: 404, message: "Route not found" });
   });
 
   // Error handler — last
