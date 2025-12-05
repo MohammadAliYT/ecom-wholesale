@@ -28,6 +28,14 @@ export function createApp(): Application {
     res.status(404).json({ statusCode: 404, message: "Route not found" });
   });
 
+  // App Landing Point
+  app.get("/", (_req, res) => {
+    res.json({
+      status: "ok",
+      message: "Backend is running 🚀",
+    });
+  });
+
   // Error handler — last
   app.use(errorHandler);
 
